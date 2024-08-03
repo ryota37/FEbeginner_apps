@@ -5,8 +5,16 @@
 </head>
 <body>
     <h1>Welcome to My BMI App</h1>
-    
-    <!-- Your content goes here -->
+    <form id="myForm">
+        <label for="height">身長を入力してください[m]:</label>
+        <input type="text" id="height" name="height">
+    </form>
+    <form id="myForm">
+        <label for="height">体重を入力してください[kg]:</label>
+        <input type="text" id="weight" name="weight">
+    </form>
+    <button type="button" onclick="calcBMI()">送信</button>
+    <p id="result"></p>
     
     <script src="script.js"></script>
 </body>
