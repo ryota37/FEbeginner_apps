@@ -2,17 +2,16 @@ function calcBMI(){
     const height = document.getElementById("height").value;
     const weight = document.getElementById("weight").value;
 
-     if (isNaN(height) || isNaN(weight)) {
-        alert("数値を入力してください。");
+    if (isNaN(height) || isNaN(weight)) {
+        alert("Please enter a numeric value.");
         return;
     }
-
+    
     if (height <= 0 || weight <= 0 || height > 2.5 || weight > 300) {
-        alert("正しい範囲の値を入力してください。");
+        alert("Please enter values within the correct range.");
         return;
     }
-
-
+    
     const rawBMI = weight / (height * height);
     const BMI = Math.round(rawBMI * 100) / 100;
     document.getElementById("result").innerText = "BMI: " + BMI;
